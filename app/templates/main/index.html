@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../static/index.css">
+    </head>
+    <body class='no-drag'>
+        <div id='head'> <div> Lotto Number </div> </div>
+        
+        <div id='wrap'> 
+            <div id='contents'> 
+                {% autoescape false %} 
+                {{lotto_data}} 
+                {% endautoescape %}
+            </div>
+        </div>
+        <footer> made by 새우 </footer>
+    </body>
+</html>
