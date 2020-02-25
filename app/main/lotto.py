@@ -1,11 +1,10 @@
 import numpy as np
 import scipy.stats as stats
 import random
+from app.main.lotto_webcrawling import lotto_webcrawling
 
 def lotto():
-    f = open('./app/main/lotto.txt', 'r')
-    arr = [ int(_) for _ in f.readlines() ]
-    f.close()
+    arr = lotto_webcrawling()
 
     _dic = {}
     for i, v in enumerate(arr):
@@ -30,7 +29,7 @@ def lotto():
                         _c += 1
                         break
 
-        # 출력 : [ No.  1 : [random] ]
+        # 출력 : [random]
         for _ in lotto:
             _result += '{:02d} '.format(_)
         _result = _result[:-1] + '<br/>'
