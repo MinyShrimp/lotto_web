@@ -12,9 +12,7 @@ def lotto():
     _dic = dict(sorted( _dic.items(), key=lambda k: k[1]))
     std_stats = sorted(stats.zscore(arr))
 
-    _result = ''
-    n = 5
-
+    _result, n = '', 5
     for i in range(n):
         lotto = []
         _c = 0
